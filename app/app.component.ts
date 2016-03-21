@@ -7,6 +7,7 @@ import { TodosService } from './todos.service';
         <div *ngFor="#todo of todosService.todos">
             <h1>{{ todo.name }}</h1>
             <p>{{ todo.content }}</p>
+            <p><a (click)='todosService.remove(todo)'>remove</a></p>
         </div>
     `,
     providers: [TodosService]
